@@ -1,0 +1,33 @@
+{
+    "name": "unoapp-dev/omnipay-cardconnect",
+    "type": "library",
+    "description": "Cardconnect driver for the Omnipay payment processing library",
+    "keywords": [
+        "cardconnect",
+        "gateway",
+        "merchant",
+        "omnipay",
+        "pay",
+        "payment",
+        "payments"
+    ],
+    "homepage": "https://github.com/unoapp-dev/omnipay-cardconnect",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anil Ahir",
+            "email": "anilahir@unoindia.co"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Omnipay\\Cardconnect\\" : "src/" }
+    },
+    "require": {
+        "league/omnipay": "^3"
+    },
+    "require-dev": {
+        "omnipay/tests": "^3",
+        "squizlabs/php_codesniffer": "^3",
+        "phpro/grumphp": "^0.14"
+    }
+}
