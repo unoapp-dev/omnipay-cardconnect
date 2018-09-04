@@ -29,7 +29,6 @@ class CreateProfileRequest extends AbstractRequest
             'defaultacct' => 'Y'
 	    ];
 	    
-        $brand = $this->getCardType();
         $profile = $this->getProfileId();
         $number = $this->getCard()->getNumber();
         $expiry = $this->getCard()->getExpiryDate('my');
@@ -51,7 +50,6 @@ class CreateProfileRequest extends AbstractRequest
             $counryCode = array_search(strtolower($counryCode), array_map('strtolower', CountryCodesDictionary::$codes));
         }
         
-        if (!empty($brand)) $data['accttype'] = $brand;
         if (!empty($profile)) $data['profile'] = $profile;
         if (!empty($number)) $data['account'] = $number;
         if (!empty($expiry)) $data['expiry'] = $expiry;
