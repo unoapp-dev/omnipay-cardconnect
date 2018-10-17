@@ -46,6 +46,7 @@ class AuthorizeRequest extends AbstractRequest
                         $data['expiry'] = $cardReference->expiry;
                         $data['profile'] = $cardReference->profile;
                         $data['acctid'] = $cardReference->acctid;
+                        $data['ecomind'] = 'E';
                         
                         if ($this->getCard()) {
                             $name = $this->getCard()->getName();

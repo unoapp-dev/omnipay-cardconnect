@@ -49,7 +49,8 @@ class CreateCardRequest extends AbstractRequest
                 'email' => $this->getCard()->getEmail(),
                 'cvv2' => $this->getCard()->getCvv(),
                 'tokenize' => 'Y',
-                'profile' => 'Y'
+                'profile' => 'Y',
+                'ecomind' => 'E'
             ];
         }
 

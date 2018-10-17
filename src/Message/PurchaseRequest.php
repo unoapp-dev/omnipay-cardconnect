@@ -26,7 +26,8 @@ class PurchaseRequest extends AbstractRequest
             'merchid'  => $this->getMerchantId(),
             'amount' => $this->getAmount(),
             'orderid' => $this->getOrderNumber(),
-            'capture' => 'Y'
+            'capture' => 'Y',
+            'ecomind' => 'E'
         ];
 
         $paymentMethod = $this->getPaymentMethod();
