@@ -28,7 +28,8 @@ class AuthorizeRequest extends AbstractRequest
             'merchid'  => $this->getMerchantId(),
             'amount' => $this->getAmount(),
             'orderid' => $this->getOrderNumber(),
-            'capture' => 'N'
+            'capture' => 'N',
+            'ecomind' => 'E'
         ];
 
         $paymentMethod = $this->getPaymentMethod();
@@ -46,7 +47,6 @@ class AuthorizeRequest extends AbstractRequest
                         $data['expiry'] = $cardReference->expiry;
                         $data['profile'] = $cardReference->profile;
                         $data['acctid'] = $cardReference->acctid;
-                        $data['ecomind'] = 'E';
                         
                         if ($this->getCard()) {
                             $name = $this->getCard()->getName();
