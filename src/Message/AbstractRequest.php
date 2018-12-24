@@ -128,6 +128,16 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->setParameter('profileId', $value);
     }
 
+    public function getBillingToken()
+    {
+        return $this->getParameter('billing_token');
+    }
+
+    public function setBillingToken($value)
+    {
+        return $this->setParameter('billing_token', $value);
+    }
+
     public function sendData($data)
     {
         $headers = [
