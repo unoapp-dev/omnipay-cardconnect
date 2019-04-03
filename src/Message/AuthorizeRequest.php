@@ -96,6 +96,7 @@ class AuthorizeRequest extends AbstractRequest
                     $phone = $this->getCard()->getBillingPhone();
                     $postal = $this->getCard()->getBillingPostcode();
                     $email = $this->getCard()->getEmail();
+                    $cvv2 = $this->getCard()->getCvv();
 
                     $provinceCode = $this->getCard()->getBillingState();
                     if (strlen($provinceCode) != 2) {
@@ -116,6 +117,7 @@ class AuthorizeRequest extends AbstractRequest
                     if (!empty($phone)) $data['phone'] = $phone;
                     if (!empty($postal)) $data['postal'] = $postal;
                     if (!empty($email)) $data['email'] = $email;
+                    if (!empty($cvv2)) $data['cvv2'] = $cvv2;
                 }
                 break;
 
