@@ -45,7 +45,6 @@ class AuthorizeRequest extends AbstractRequest
                         $cardReference = json_decode($this->getCardReference());
                         $data['account'] = $cardReference->account;
                         $data['expiry'] = $cardReference->expiry;
-                        $data['profile'] = $cardReference->profile;
                         $data['acctid'] = $cardReference->acctid;
                         
                         if ($this->getCard()) {
