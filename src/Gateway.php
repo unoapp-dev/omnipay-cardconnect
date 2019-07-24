@@ -113,6 +113,16 @@ class Gateway extends AbstractGateway
         return $this->createRequest('\Omnipay\Cardconnect\Message\AuthorizeRequest', $parameters);
     }
 
+    public function void(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\Cardconnect\Message\VoidRequest', $parameters);
+    }
+
+    public function inquire(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\Cardconnect\Message\InquireRequest', $parameters);
+    }
+    
     public function capture(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\Cardconnect\Message\CaptureRequest', $parameters);
