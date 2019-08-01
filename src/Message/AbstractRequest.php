@@ -138,12 +138,17 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->setParameter('billing_token', $value);
     }
 
-    public function sendData($data)
+    public function getHeaders()
     {
-        $headers = [
+        return [
             'Content-Type' => 'application/json',
             'Authorization' => 'Basic ' . base64_encode($this->getUsername() . ':' . $this->getPassword())
         ];
+    }
+
+    public function sendData($data)
+    {
+        $headers = $this->getHeaders();
 
         if (!empty($data)) {
             $httpResponse = $this->httpClient->request($this->getHttpMethod(), $this->getEndpoint(), $headers, $data);
